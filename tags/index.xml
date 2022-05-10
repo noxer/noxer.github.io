@@ -1,1 +1,83 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on plusmid's Blog</title><link>https://blog.plusmid.dev/tags/</link><description>Recent content in Tags on plusmid's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.plusmid.dev/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux</title><link>https://blog.plusmid.dev/tags/linux/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/linux/</guid><description/></item><item><title>MacOS</title><link>https://blog.plusmid.dev/tags/macos/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/macos/</guid><description/></item><item><title>Meeting</title><link>https://blog.plusmid.dev/tags/meeting/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/meeting/</guid><description/></item><item><title>Restore</title><link>https://blog.plusmid.dev/tags/restore/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/restore/</guid><description/></item><item><title>Ubuntu</title><link>https://blog.plusmid.dev/tags/ubuntu/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/ubuntu/</guid><description/></item><item><title>Windows</title><link>https://blog.plusmid.dev/tags/windows/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/windows/</guid><description/></item><item><title>Zoom</title><link>https://blog.plusmid.dev/tags/zoom/</link><pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/zoom/</guid><description/></item><item><title>Convert</title><link>https://blog.plusmid.dev/tags/convert/</link><pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate><guid>https://blog.plusmid.dev/tags/convert/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on plusmid&#39;s blog</title>
+    <link>https://blog.plusmid.dev/tags/</link>
+    <description>Recent content in Tags on plusmid&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.plusmid.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>https://blog.plusmid.dev/tags/linux/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MacOS</title>
+      <link>https://blog.plusmid.dev/tags/macos/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meeting</title>
+      <link>https://blog.plusmid.dev/tags/meeting/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/meeting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Restore</title>
+      <link>https://blog.plusmid.dev/tags/restore/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/restore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://blog.plusmid.dev/tags/ubuntu/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://blog.plusmid.dev/tags/windows/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zoom</title>
+      <link>https://blog.plusmid.dev/tags/zoom/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/zoom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Convert</title>
+      <link>https://blog.plusmid.dev/tags/convert/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.plusmid.dev/tags/convert/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

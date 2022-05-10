@@ -1,1 +1,77 @@
-<!doctype html><html><head><title>How to convert .zoom files on Ubuntu/Linux // plusmid's Blog</title><meta charset=utf-8><meta name=generator content="Hugo 0.70.0-DEV"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Tim Scheuermann"><meta name=description content="Guide on how to convert .zoom files on Ubuntu/Linux when just clicking them doesn't work."><base href=https://blog.plusmid.dev/><link rel=stylesheet href=https://blog.plusmid.dev/css/main.min.89370bfdd636611d7283523dbb885b5a6137cf1749d5503e069b06f5cc55f5bb.css><link rel=stylesheet href=https://blog.plusmid.dev/css/static.css></head><body><header class=app-header><a href=/><img class=app-header-avatar src=/images/avatar.png></a><h1>plusmid's Blog</h1><p>Software Developer and Go Enthusiast</p><div class=app-header-social><a target=_blank href=https://github.com/noxer><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77a5.44 5.44.0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a><a target=_blank href=https://twitter.com/plusmid><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg></a></div><div class=app-header-main-menu><p><a href=/>Home</a></p><p><a href=/tags/linux>Linux</a></p><p><a href=/pong/>Pong</a></p></div></header><main class=app-container><article class=post><header class=post-header><h1 class=post-title>How to convert .zoom files on Ubuntu/Linux</h1><div class=post-meta><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>May 2, 2020</div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>1 min read</div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><a class=tag href=https://blog.plusmid.dev/tags/zoom/>Zoom</a><a class=tag href=https://blog.plusmid.dev/tags/meeting/>Meeting</a><a class=tag href=https://blog.plusmid.dev/tags/convert/>Convert</a><a class=tag href=https://blog.plusmid.dev/tags/ubuntu/>Ubuntu</a><a class=tag href=https://blog.plusmid.dev/tags/linux/>Linux</a></div></div></header><div class=post-content><h3 id=preface>Preface</h3><p>It seems like Zoom does no longer allow you to convert the files just by clicking on them.</p><p>This guide explains how to convert <code>.zoom</code> files on Ubuntu. It should also work on other Linux distributions with minor changes. Here you can find the guides for <a href=/posts/convert-zoom-files-on-macos/>macOS</a> and <a href=/posts/convert-zoom-files-on-windows/>Windows</a>.</p><p>I&rsquo;m assuming that you&rsquo;ve installed the <a href=https://zoom.us/download>Zoom client</a> using the standard way.</p><h3 id=step-1>Step 1</h3><p><img src=/images/zoom/lin_02_zoomcmd_correct.png alt="command line terminal with the command &lsquo;/opt/zoom/zoomlinux /home/tim/rec/double_click_to_convert_01.zoom&rsquo; typed in"></p><p>Open a console and type in the command <code>/opt/zoom/zoomlinux</code> followed by the path to the first zoom file you want to convert. You can insert a file path at the text cursor position by dragging the file into the terminal window. Confirm the command by pressing enter.</p><h3 id=step-2>Step 2</h3><p><img src=/images/zoom/lin_03_zoomconverting.png alt="Zoom windows showing the progress of the conversion. The text reads &lsquo;You have a recording that needs to be converted before viewing. You may convert your recording later by double clicking .zoom file located in the recording folder.'"></p><p>Zoom is now converting the file(s). This may take a while. Just grab your favorite beverage and wait.</p><h3 id=step-3>Step 3</h3><p><img src=/images/zoom/lin_04_zoomsuccess.png alt="Files window showing the converted files: &lsquo;audio_only.m4a&rsquo;, &lsquo;audio_only_1.m4a&rsquo;, &lsquo;playback.m3u&rsquo;, &lsquo;zoom_0.mp4&rsquo;, &lsquo;zoom_1.mp4&rsquo;"></p><p>When it is done, the window will close. Now you can find the converted files in the folder the original <code>.zoom</code> files were in.</p></div></article></main></body></html>
+<!doctype html>
+<html>
+  <head>
+    <title>How to convert .zoom files on Ubuntu/Linux // plusmid&#39;s blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0-DEV" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Tim Scheuermann" />
+    <meta name="description" content="Guide on how to convert .zoom files on Ubuntu/Linux when just clicking them doesn&#39;t work." />
+    <base href="https://blog.plusmid.dev/" />
+    <link rel="stylesheet" href="https://blog.plusmid.dev/css/main.min.89370bfdd636611d7283523dbb885b5a6137cf1749d5503e069b06f5cc55f5bb.css" />
+    <link rel="stylesheet" href="https://blog.plusmid.dev/css/static.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="/images/avatar.png" /></a>
+      <h1>plusmid&#39;s blog</h1>
+      <p>Software Developer and Go Enthusiast</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/noxer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+        
+          <a target="_blank" href="https://twitter.com/plusmid"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+        
+          <a target="_blank" href="https://chaos.social/@plusmid" rel="me"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-1 -1 23 23" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mastodon"><path d="M 19.613281 12.589844 C 19.316406 14.070312 16.972656 15.691406 14.28125 16.007812 C 12.878906 16.171875 11.496094 16.320312 10.023438 16.253906 C 7.613281 16.148438 5.710938 15.691406 5.710938 15.691406 C 5.710938 15.921875 5.726562 16.140625 5.753906 16.34375 C 6.066406 18.667969 8.113281 18.808594 10.050781 18.875 C 12.003906 18.9375 13.746094 18.402344 13.746094 18.402344 L 13.828125 20.128906 C 13.828125 20.128906 12.460938 20.847656 10.023438 20.980469 C 8.679688 21.050781 7.011719 20.949219 5.070312 20.445312 C 0.855469 19.355469 0.128906 14.964844 0.0195312 10.507812 C -0.015625 9.183594 0.0078125 7.9375 0.0078125 6.894531 C 0.0078125 2.339844 3.058594 1.003906 3.058594 1.003906 C 4.597656 0.3125 7.242188 0.0234375 9.988281 0 L 10.054688 0 C 12.800781 0.0234375 15.445312 0.3125 16.984375 1.003906 C 16.984375 1.003906 20.039062 2.339844 20.039062 6.894531 C 20.039062 6.894531 20.074219 10.257812 19.613281 12.589844 "/><path fill="currentColor" stroke-width="0" d="M 16.4375 7.25 L 16.4375 12.765625 L 14.199219 12.765625 L 14.199219 7.410156 C 14.199219 6.28125 13.714844 5.710938 12.742188 5.710938 C 11.667969 5.710938 11.128906 6.386719 11.128906 7.730469 L 11.128906 10.664062 L 8.90625 10.664062 L 8.90625 7.730469 C 8.90625 6.386719 8.371094 5.710938 7.296875 5.710938 C 6.324219 5.710938 5.835938 6.28125 5.835938 7.410156 L 5.835938 12.765625 L 3.601562 12.765625 L 3.601562 7.25 C 3.601562 6.121094 3.894531 5.226562 4.484375 4.5625 C 5.09375 3.898438 5.890625 3.558594 6.878906 3.558594 C 8.023438 3.558594 8.890625 3.988281 9.460938 4.847656 L 10.019531 5.761719 L 10.574219 4.847656 C 11.148438 3.988281 12.015625 3.558594 13.160156 3.558594 C 14.148438 3.558594 14.945312 3.898438 15.554688 4.5625 C 16.140625 5.226562 16.4375 6.121094 16.4375 7.25 "/></svg></a>
+        
+      </div>
+      <div class="app-header-main-menu">
+        
+          <p><a href="/">Home</a></p>
+        
+          <p><a href="/tags/linux">Linux</a></p>
+        
+          <p><a href="/pong/">Pong</a></p>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">How to convert .zoom files on Ubuntu/Linux</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          May 2, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+          <a class="tag" href="https://blog.plusmid.dev/tags/zoom/">Zoom</a><a class="tag" href="https://blog.plusmid.dev/tags/meeting/">Meeting</a><a class="tag" href="https://blog.plusmid.dev/tags/convert/">Convert</a><a class="tag" href="https://blog.plusmid.dev/tags/ubuntu/">Ubuntu</a><a class="tag" href="https://blog.plusmid.dev/tags/linux/">Linux</a></div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="preface">Preface</h3>
+<p>It seems like Zoom does no longer allow you to convert the files just by clicking on them.</p>
+<p>This guide explains how to convert <code>.zoom</code> files on Ubuntu. It should also work on other Linux distributions with minor changes. Here you can find the guides for <a href="/posts/convert-zoom-files-on-macos/">macOS</a> and <a href="/posts/convert-zoom-files-on-windows/">Windows</a>.</p>
+<p>I&rsquo;m assuming that you&rsquo;ve installed the <a href="https://zoom.us/download">Zoom client</a> using the standard way.</p>
+<h3 id="step-1">Step 1</h3>
+<p><img src="/images/zoom/lin_02_zoomcmd_correct.png" alt="command line terminal with the command &lsquo;/opt/zoom/zoomlinux /home/tim/rec/double_click_to_convert_01.zoom&rsquo; typed in"></p>
+<p>Open a console and type in the command <code>/opt/zoom/zoomlinux</code> followed by the path to the first zoom file you want to convert. You can insert a file path at the text cursor position by dragging the file into the terminal window. Confirm the command by pressing enter.</p>
+<h3 id="step-2">Step 2</h3>
+<p><img src="/images/zoom/lin_03_zoomconverting.png" alt="Zoom windows showing the progress of the conversion. The text reads &lsquo;You have a recording that needs to be converted before viewing. You may convert your recording later by double clicking .zoom file located in the recording folder.'"></p>
+<p>Zoom is now converting the file(s). This may take a while. Just grab your favorite beverage and wait.</p>
+<h3 id="step-3">Step 3</h3>
+<p><img src="/images/zoom/lin_04_zoomsuccess.png" alt="Files window showing the converted files: &lsquo;audio_only.m4a&rsquo;, &lsquo;audio_only_1.m4a&rsquo;, &lsquo;playback.m3u&rsquo;, &lsquo;zoom_0.mp4&rsquo;, &lsquo;zoom_1.mp4&rsquo;"></p>
+<p>When it is done, the window will close. Now you can find the converted files in the folder the original <code>.zoom</code> files were in.</p>
+
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
