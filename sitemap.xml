@@ -1,94 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://blog.plusmid.dev/posts/restore-double-click-for-zoom-files-on-macos/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/posts/restore-double-click-for-zoom-files-on-linux/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/posts/restore-double-click-for-zoom-files-on-windows/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/linux/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/macos/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/meeting/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/posts/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/restore/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/ubuntu/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/windows/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/zoom/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/tags/convert/</loc>
     <lastmod>2020-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/posts/convert-zoom-files-on-macos/</loc>
     <lastmod>2020-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/posts/convert-zoom-files-on-linux/</loc>
     <lastmod>2020-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/posts/convert-zoom-files-on-windows/</loc>
     <lastmod>2020-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.plusmid.dev/categories/</loc>
   </url>
-  
 </urlset>
