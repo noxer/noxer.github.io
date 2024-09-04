@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #d0e7ff; /* Initial light blue */
-    animation: backgroundFade 6s infinite; /* Apply the animation */
+    animation: backgroundFade 31s infinite; /* Apply the animation */
 }
 
 #app {
@@ -59,6 +59,31 @@ body {
     color: #333;
 }
 
+.error-container {
+    border: 2px dashed #890000;
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efa7a7;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.error-container p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#errorHeadline {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .hidden {
     display: none;
 }
@@ -73,6 +98,7 @@ body {
     font-weight: bold;
     color: #333;
     margin-top: 10px;
+    margin-bottom: 10px;
     word-break: break-all;
     text-align: center;
 }

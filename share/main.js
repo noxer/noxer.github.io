@@ -7,6 +7,45 @@ const fileInput = document.getElementById('fileInput');
 const peerIdContainer = document.getElementById('peerIdContainer');
 const peerIdUrl = document.getElementById('peerIdUrl');
 const progressBarsContainer = document.getElementById('progressBarsContainer');
+const errorContainer = document.getElementById('errorContainer')
+
+function onError(err) {
+    dropZone.classList.add('hidden');
+    peerIdContainer.classList.add('hidden');
+
+    let msg = 'An unknown error occurred, please try reloading the page';
+
+    switch (err.type) {
+    case 'browser-incompatible':
+        msg = 'The browser you are using is incompatible with WebRTC, please consider updating it';
+    case 'disconnected':
+        msg = 'This instance has been disconnected, please reload the page';
+    case 'invalid-id':
+        msg = 'The peer ID you are trying to use is invalid. Maybe you copied a few additional characters at the end of the URL?';
+    case 'network':
+        msg = 'We can\'t reach the signalling server. Please try again later.';
+    case 'peer-unavailable':
+        msg = 'The peer ID you are using is either wrong or the peer no longer exists. Ask them for a new link.';
+    case 'ssl-unavailable':
+        msg = 'An unencrypted connection would be used for this transfer. We\'re blocking this for your safety.';
+    case 'server-error':
+        msg = 'The tunneling server is currently unavailable. Please try again later.';
+    case 'socket-error':
+        msg = 'The network socket reported an error. Please try reloading the page, browser or device.';
+    case 'socket-closed':
+        msg = 'The network socket was unexpectedly closed. Make sure you\'re still connected to the internet and nothing blocks the connections.';
+    case 'unavailable-id':
+        msg = 'The ID we are trying to use is already in use. Please reload the page.';
+    case 'webrtc':
+        msg = 'We\'ve encountered a WebRTC error. Please try reloading the page.';
+    }
+
+    const p = document.createElement('p');
+    p.textContent = msg;
+    errorContainer.appendChild(p);
+
+    errorContainer.classList.remove('hidden');
+}
 
 // Hide the dropZone if the page is opened with a peerId parameter (receiver side)
 const urlParams = new URLSearchParams(window.location.search);
@@ -65,6 +104,11 @@ function handleFile(file) {
         // Display the generated peer ID as a URL
         const url = `https://blog.plusmid.dev/share?peerId=${id}`;
         peerIdUrl.textContent = url;
+        peerIdUrl.onclick = (_) => {
+            navigator.clipboard.writeText(url);
+            peerIdUrl.textContent = 'Copied!';
+            setTimeout(() => { peerIdUrl.textContent = url; }, 5000);
+        };
     });
 
     // Wait for connections from other peers
@@ -80,7 +124,7 @@ function handleFile(file) {
             document.body.classList.add('pulsing-background');
 
             // Create progress bar for the receiver
-            createProgressBar(connId, incomingConn);
+            createProgressBar(connId, incomingConn, true);
 
             // Send file metadata before sending file chunks
             incomingConn.send({
@@ -99,6 +143,8 @@ function handleFile(file) {
             displayFinalProgress(connId);
         });
     });
+
+    peer.on('error', onError);
 }
 
 // Function to send a file in chunks and update the progress bar
@@ -131,13 +177,13 @@ function sendFile(file, connection, connId) {
 }
 
 // Function to create a progress bar for each receiver
-function createProgressBar(shortId, connection) {
+function createProgressBar(shortId, connection, sender) {
     const wrapper = document.createElement('div');
     wrapper.className = 'progress-bar-wrapper';
     wrapper.id = `progress-bar-wrapper-${shortId}`;
 
     const label = document.createElement('p');
-    label.textContent = `Receiver ${connection.peer.slice(0, 6)} Progress:`;
+    label.textContent = `${sender ? 'Sender' : 'Receiver'} ${shortId} Progress:`;
 
     const progressBar = document.createElement('progress');
     progressBar.id = `progress-${shortId}`;
@@ -202,7 +248,7 @@ function initializeReceiver(peerId) {
 
             // Show progress bar for download with a unique short ID
             const connId = conn.peer.slice(0, 6);
-            createProgressBar(connId, conn);
+            createProgressBar(connId, conn, false);
 
             conn.on('data', (data) => {
                 if (data.type === 'metadata') {
@@ -222,6 +268,8 @@ function initializeReceiver(peerId) {
             });
         });
     });
+
+    peer.on('error', onError);
 }
 
 // Initialize sender
@@ -257,7 +305,7 @@ function receiveFileChunk(chunk, conn) {
         const link = document.createElement('a');
         link.href = url;
         link.download = conn.metadata.name || 'downloaded-file'; // Use the file name from metadata
-        link.textContent = `Download ${conn.metadata.name || 'downloaded-file'}`;
+        link.textContent = `Download ${conn.metadata.name || 'downloaded file'}`;
         fileList.appendChild(link);
 
         // Reset chunks and size for next file
