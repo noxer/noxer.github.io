@@ -90,7 +90,7 @@ function handleFile(file) {
             });
 
             // Send the file in chunks and track progress
-            sendFile(file, incomingConn);
+            sendFile(file, incomingConn, connId);
         });
 
         incomingConn.on('close', () => {
@@ -102,8 +102,8 @@ function handleFile(file) {
 }
 
 // Function to send a file in chunks and update the progress bar
-function sendFile(file, connection) {
-    const chunkSize = 16 * 1024; // 16KB chunks
+function sendFile(file, connection, connId) {
+    const chunkSize = 64 * 1024; // 16KB chunks
     let offset = 0;
     let startTime = Date.now(); // Start time for speed calculation
 
@@ -122,6 +122,7 @@ function sendFile(file, connection) {
         if (offset < file.size) {
             setTimeout(sendNextChunk, 30); // Send next chunk after a short delay
         } else {
+            displayFinalProgress(connId);
             console.log('File sent successfully.');
         }
     }
@@ -136,7 +137,7 @@ function createProgressBar(shortId, connection) {
     wrapper.id = `progress-bar-wrapper-${shortId}`;
 
     const label = document.createElement('p');
-    label.textContent = `Receiver ${shortId} Progress:`;
+    label.textContent = `Receiver ${connection.peer.slice(0, 6)} Progress:`;
 
     const progressBar = document.createElement('progress');
     progressBar.id = `progress-${shortId}`;
