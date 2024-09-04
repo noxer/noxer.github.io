@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P File Sharing with PeerJS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>File Share</h1>
+        <!-- Drag-and-drop area -->
+        <div id="dropZone" class="drop-zone">
+            <p>Drag & drop your file here or click to select</p>
+            <input type="file" id="fileInput" style="display: none;" />
+        </div>
+        <!-- Peer ID container (hidden initially) -->
+        <div id="peerIdContainer" class="peer-id-container hidden">
+            <p>Share this link to connect and download the file:</p>
+            <p id="peerIdUrl"></p>
+        </div>
+        <!-- Progress bars container -->
+        <div id="progressBarsContainer"></div>
+        <div id="fileList"></div>
+    </div>
+
+    <script src="peerjs.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
